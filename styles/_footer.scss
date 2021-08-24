@@ -1,0 +1,11 @@
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background: $dark;
+  border-top: 4px solid $red;
+  p {
+    margin: 1rem;
+  }
+}

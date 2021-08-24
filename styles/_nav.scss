@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $red;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  &-list {
+    display: flex;
+    margin-right: 2rem;
+    a {
+      display: block;
+      font-size: 2.2rem;
+      padding: 2rem;
+    }
+    a:hover {
+      background: $blue;
+      color: white;
+    }
+  }
+}
