@@ -21,9 +21,69 @@
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
     transition: all 0.2s linear;
+    position: relative;
+
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: all 0.25s ease 0s;
+    }
+
+    &__actions {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      opacity: 0;
+      transition: all 0.35s ease 0s;
+      transform: translateY(1rem);
+
+      & > div {
+        width: 30%;
+        padding: 0 0.5rem;
+      }
+
+      button {
+        width: 100%;
+        cursor: pointer;
+        padding: 0.5rem;
+        background-color: transparent;
+        border: 2px solid #ff7f50;
+        border-radius: 5px;
+
+        a {
+          color: #ff7f50;
+        }
+      }
+    }
+
+    &:hover &__overlay,
+    &:hover &__actions {
+      opacity: 1;
+      transform: translateY(0);
+      button:hover {
+        background-color: #ff7f50;
+        a {
+          color: white;
+        }
+      }
+    }
   }
   &-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 0 50px 20px $red;
   }
   &-item:hover .code {

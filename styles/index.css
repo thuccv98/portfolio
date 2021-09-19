@@ -321,11 +321,92 @@ img {
   border-radius: 2px;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  position: relative;
+}
+
+.projects-item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  -webkit-transition: all 0.25s ease 0s;
+  transition: all 0.25s ease 0s;
+}
+
+.projects-item__actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  opacity: 0;
+  -webkit-transition: all 0.35s ease 0s;
+  transition: all 0.35s ease 0s;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+
+.projects-item__actions > div {
+  width: 30%;
+  padding: 0 0.5rem;
+}
+
+.projects-item__actions button {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid #ff7f50;
+  border-radius: 5px;
+}
+
+.projects-item__actions button a {
+  color: #ff7f50;
+}
+
+.projects-item:hover .projects-item__overlay,
+.projects-item:hover .projects-item__actions {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.projects-item:hover .projects-item__overlay button:hover,
+.projects-item:hover .projects-item__actions button:hover {
+  background-color: #ff7f50;
+}
+
+.projects-item:hover .projects-item__overlay button:hover a,
+.projects-item:hover .projects-item__actions button:hover a {
+  color: white;
 }
 
 .projects-item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   -webkit-box-shadow: 0 0 50px 20px #e76f51;
           box-shadow: 0 0 50px 20px #e76f51;
 }
